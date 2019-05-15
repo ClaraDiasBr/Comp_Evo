@@ -21,6 +21,7 @@ for k=1:3
     popula(k,:,:)=Pop;
 %     Pop = zeros(100,57);
 %     Pop = squeeze(popula(k,:,:));
+    PopNew = Pop; % separar as pops no loop
     
     melhor=zeros(r,g);
     media=zeros(r,g);
@@ -109,7 +110,7 @@ hold on
 plot(1:g,medmedia,'g');
 hold on
 plot(1:g,medpior,'r');
-xlabel("Gerações");
+xlabel("GeraÃ§Ãµes");
 ylabel("Fitness");
 hold off
 
@@ -121,7 +122,7 @@ if Elitismo == true
     plot(1:g,medmediaElitismo,'g');
     hold on
     plot(1:g,medpiorElitismo,'r');
-    xlabel("Gerações");
+    xlabel("GeraÃ§Ãµes");
     ylabel("Fitness");
     title('Com Elitismo');
     hold off
